@@ -19,6 +19,10 @@
 		619B78FE19A2E91400347FEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619B78E619A2E91400347FEF /* UIKit.framework */; };
 		619B790619A2E91400347FEF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 619B790419A2E91400347FEF /* InfoPlist.strings */; };
 		619B790819A2E91400347FEF /* iBeaconsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 619B790719A2E91400347FEF /* iBeaconsDemoTests.m */; };
+		619B791319A2E93300347FEF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619B791219A2E93300347FEF /* RootViewController.m */; };
+		619B791619A2E94D00347FEF /* IBeaconsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 619B791519A2E94D00347FEF /* IBeaconsManager.m */; };
+		619B791819A2E95C00347FEF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619B791719A2E95C00347FEF /* CoreLocation.framework */; };
+		619B791A19A2E96700347FEF /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619B791919A2E96700347FEF /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,12 @@
 		619B790319A2E91400347FEF /* iBeaconsDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iBeaconsDemoTests-Info.plist"; sourceTree = "<group>"; };
 		619B790519A2E91400347FEF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		619B790719A2E91400347FEF /* iBeaconsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBeaconsDemoTests.m; sourceTree = "<group>"; };
+		619B791119A2E93300347FEF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		619B791219A2E93300347FEF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		619B791419A2E94D00347FEF /* IBeaconsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBeaconsManager.h; sourceTree = "<group>"; };
+		619B791519A2E94D00347FEF /* IBeaconsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBeaconsManager.m; sourceTree = "<group>"; };
+		619B791719A2E95C00347FEF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		619B791919A2E96700347FEF /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619B791A19A2E96700347FEF /* CoreBluetooth.framework in Frameworks */,
+				619B791819A2E95C00347FEF /* CoreLocation.framework in Frameworks */,
 				619B78E519A2E91400347FEF /* CoreGraphics.framework in Frameworks */,
 				619B78E719A2E91400347FEF /* UIKit.framework in Frameworks */,
 				619B78E319A2E91400347FEF /* Foundation.framework in Frameworks */,
@@ -96,6 +108,8 @@
 		619B78E119A2E91400347FEF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				619B791919A2E96700347FEF /* CoreBluetooth.framework */,
+				619B791719A2E95C00347FEF /* CoreLocation.framework */,
 				619B78E219A2E91400347FEF /* Foundation.framework */,
 				619B78E419A2E91400347FEF /* CoreGraphics.framework */,
 				619B78E619A2E91400347FEF /* UIKit.framework */,
@@ -109,6 +123,10 @@
 			children = (
 				619B78F119A2E91400347FEF /* AppDelegate.h */,
 				619B78F219A2E91400347FEF /* AppDelegate.m */,
+				619B791119A2E93300347FEF /* RootViewController.h */,
+				619B791219A2E93300347FEF /* RootViewController.m */,
+				619B791419A2E94D00347FEF /* IBeaconsManager.h */,
+				619B791519A2E94D00347FEF /* IBeaconsManager.m */,
 				619B78F419A2E91400347FEF /* Images.xcassets */,
 				619B78E919A2E91400347FEF /* Supporting Files */,
 			);
@@ -241,6 +259,8 @@
 			files = (
 				619B78F319A2E91400347FEF /* AppDelegate.m in Sources */,
 				619B78EF19A2E91400347FEF /* main.m in Sources */,
+				619B791319A2E93300347FEF /* RootViewController.m in Sources */,
+				619B791619A2E94D00347FEF /* IBeaconsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +380,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iBeaconsDemo/iBeaconsDemo-Prefix.pch";
 				INFOPLIST_FILE = "iBeaconsDemo/iBeaconsDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -373,6 +394,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iBeaconsDemo/iBeaconsDemo-Prefix.pch";
 				INFOPLIST_FILE = "iBeaconsDemo/iBeaconsDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
